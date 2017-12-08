@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace LocalTheatre.Controllers
 {
-   
+    [Authorize(Roles = "Admin")]
     public class UserAdminstrationController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

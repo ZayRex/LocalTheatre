@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using LocalTheatre.Models;
+using System.Web.Security;
 
 namespace LocalTheatre.Controllers
 ///<summary>
@@ -78,6 +79,7 @@ namespace LocalTheatre.Controllers
         }
 
         // GET: Posts/Edit/5
+        [Authorize(Roles = "Admin,User")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -97,6 +99,7 @@ namespace LocalTheatre.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,User")]
         public ActionResult Edit([Bind(Include = "PostID,UserName,PostTitle,PostDesc,PostDate")] Post post)
         {
             if (ModelState.IsValid)
@@ -109,6 +112,7 @@ namespace LocalTheatre.Controllers
         }
 
         // GET: Posts/Delete/5
+        [Authorize(Roles = "Admin,User")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -126,6 +130,7 @@ namespace LocalTheatre.Controllers
         // POST: Posts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,User")]
         public ActionResult DeleteConfirmed(int id)
         {
             var post = db.Posts.Where(b => b.PostID == id).Include("Comments").FirstOrDefault();
@@ -145,6 +150,7 @@ namespace LocalTheatre.Controllers
 
         [ValidateAntiForgeryToken]
         [HttpPost, ActionName("DeleteComment")]
+        [Authorize(Roles = "Admin,User")]
         public ActionResult DeleteComment(Comment com)
         {
             var modeltodelete = db.Comments.FirstOrDefault(s => s.CommentID == com.CommentID);
