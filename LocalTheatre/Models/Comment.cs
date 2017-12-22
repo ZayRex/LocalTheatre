@@ -7,7 +7,7 @@ using System.Web;
 namespace LocalTheatre.Models
 {
     ///<summary>
-    ///
+    /// this class creates Comment object with its properties, Comment ID, Post ID, Comment Bodey, Comment Date and Username
     /// 
     /// </summary>
     public class Comment

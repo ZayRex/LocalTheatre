@@ -8,7 +8,7 @@ namespace LocalTheatre.Models
 {
     ///<summary>
     ///
-    /// this class designs post with its properties
+    /// this class creates post object with its properties, Post ID, Username, Title, Description and Comments
     /// 
     /// </summary>
     public class Post

@@ -4,7 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace LocalTheatre.Controllers
+///<summary>
+/// 
+/// 
+/// </summary>
 {
     public class HomeController : Controller
     {

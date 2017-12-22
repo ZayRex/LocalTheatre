@@ -11,7 +11,8 @@ using System.Web.Security;
 
 namespace LocalTheatre.Controllers
 ///<summary>
-///
+/// this class manages the contents of the Posts page and the features in it, like getting the data from database
+/// creating data in the database, editing it and deleting it
 /// 
 /// </summary>
 {

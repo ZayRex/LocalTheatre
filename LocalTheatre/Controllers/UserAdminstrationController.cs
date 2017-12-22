@@ -10,6 +10,10 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace LocalTheatre.Controllers
+///<summary>
+/// this controller manages users roles and adminstration
+/// 
+/// </summary>
 {
     [Authorize(Roles = "Admin")]
     public class UserAdminstrationController : Controller

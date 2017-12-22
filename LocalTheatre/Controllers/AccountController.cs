@@ -10,7 +10,12 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using LocalTheatre.Models;
 
+
 namespace LocalTheatre.Controllers
+///<summary>
+/// 
+/// 
+/// </summary>
 {
     [Authorize]
     public class AccountController : Controller
